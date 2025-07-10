@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp">
+
+    <!-- Скелетон для кнопки назад -->
+
+    <!-- Основной контент скелетона -->
+    <LinearLayout
+        android:id="@+id/skeletonMainContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/skeletonBottomNav"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <!-- Скелетон поисковой строки -->
+        <View
+            android:id="@+id/skeletonSearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/skeleton_background" />
+
+        <!-- Скелетон заголовка -->
+        <View
+            android:id="@+id/skeletonTitle"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/skeleton_background" />
+
+        <!-- Скелетон кнопок фильтров -->
+        <LinearLayout
+            android:id="@+id/skeletonFilterButtonsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/skeletonFilterButton1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/skeleton_background" />
+
+            <View
+                android:id="@+id/skeletonFilterButton2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/skeleton_background" />
+
+            <View
+                android:id="@+id/skeletonFilterButton3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/skeleton_background" />
+        </LinearLayout>
+
+        <!-- Скелетон списка аудиторий -->
+        <LinearLayout
+            android:id="@+id/skeletonRoomsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Строка скелетона (3 элемента) -->
+            <LinearLayout
+                android:id="@+id/skeletonRoomRow1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/skeletonRoom1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/skeleton_background" />
+
+                <View
+                    android:id="@+id/skeletonRoom2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/skeleton_background" />
+
+                <View
+                    android:id="@+id/skeletonRoom3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/skeleton_background" />
+            </LinearLayout>
+
+            <!-- Строка скелетона (1 элемент) -->
+            <View
+                android:id="@+id/skeletonRoomRow2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/skeleton_background" />
+
+            <!-- Строка скелетона (2 элемента) -->
+            <LinearLayout
+                android:id="@+id/skeletonRoomRow3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/skeletonRoom4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/skeleton_background" />
+
+                <View
+                    android:id="@+id/skeletonRoom5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/skeleton_background" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Скелетон нижней навигации -->
+    <View
+        android:id="@+id/skeletonBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/skeleton_background"/>
+</RelativeLayout>

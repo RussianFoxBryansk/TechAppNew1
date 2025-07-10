@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/appBackground"
+    android:layout_marginTop="16dp">
+
+    <!-- Округлый информационный блок -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/infoCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Описание возможностей:"
+                android:textSize="16sp"
+                android:textColor="?attr/appText"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="• Удаление\n• Создание кабинетов/корпусов/лк"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="12dp"
+                android:background="@color/divider_grey"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Версия приложения: суперметабета"
+                android:textSize="14sp"
+                android:textColor="@color/primary_color"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Блок кнопок -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/infoCard"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <!-- Добавить корпус -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addBuildingBtn"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:text="Добавить корпус"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/primary_color"
+            app:strokeColor="@color/primary_color"/>
+
+        <!-- Удалить корпус -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteBuildingBtn"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:text="Удалить корпус"
+            app:icon="@drawable/ic_delete"
+            app:iconTint="@color/error_red"
+            app:strokeColor="@color/error_red"/>
+
+        <!-- Добавить аудиторию -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addRoomBtn"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:text="Добавить аудиторию"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/primary_color"
+            app:strokeColor="@color/primary_color"/>
+
+        <!-- Удалить аудиторию -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteRoomBtn"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Удалить аудиторию"
+            app:icon="@drawable/ic_delete"
+            app:iconTint="@color/error_red"
+            app:strokeColor="@color/error_red"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ComputerRoomBtn"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Настройка техники в аудитории"
+            app:icon="@drawable/personal_computer"
+            app:iconTint="@color/primary_color"
+            app:strokeColor="@color/primary_color"/>
+    </LinearLayout>
+
+    <!-- Нижняя навигация (если нужно) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/bottom_nav"
+        app:itemTextColor="@color/checkT"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu"/>
+</RelativeLayout>

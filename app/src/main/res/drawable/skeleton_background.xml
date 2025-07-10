@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#EEEEEE"/> <!-- Базовый цвет -->
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+    <item>
+        <animated-selector >
+            <item android:state_activated="true">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="0"
+                        android:endColor="#DDDDDD"
+                        android:startColor="#EEEEEE"
+                        android:type="linear"/>
+                    <corners android:radius="8dp"/>
+                </shape>
+            </item>
+            <item android:state_activated="false">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="0"
+                        android:endColor="#EEEEEE"
+                        android:startColor="#DDDDDD"
+                        android:type="linear"/>
+                    <corners android:radius="8dp"/>
+                </shape>
+            </item>
+            <transition
+                android:fromId="@+id/state_activated"
+                android:toId="@+id/state_deactivated">
+                <animation-list>
+                    <item android:duration="800">
+                        <shape android:shape="rectangle">
+                            <gradient
+                                android:angle="0"
+                                android:endColor="#EEEEEE"
+                                android:startColor="#DDDDDD"
+                                android:type="linear"/>
+                        </shape>
+                    </item>
+                </animation-list>
+            </transition>
+        </animated-selector>
+    </item>
+</layer-list>

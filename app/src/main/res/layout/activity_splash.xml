@@ -1,0 +1,16 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splashContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Центрируем шарик горизонтально и ставим за верхним краем -->
+    <ImageView
+        android:id="@+id/ball"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_blue_ball"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="-60dp" />
+
+</FrameLayout>

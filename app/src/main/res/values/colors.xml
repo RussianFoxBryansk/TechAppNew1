@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="search_stroke_color">#33000000</color>
+    <color name="icon_color">#FF808080</color>
+    <color name="checkT">#008FA0</color>
+    <color name="checkF">#AFAFAF</color>
+    <color name="light_grey">#F5F5F5</color>
+    <color name="dark_grey">#FF616161</color>
+    <color name="skeleton_grey">#E7E5E5</color>
+    <color name="skeleton_dark">#E7E5E5</color>
+    <color name="divider_grey">#E0E0E0</color>
+    <color name="primary_color">#008FA0</color>
+    <color name="error_red">#FF0000</color>
+</resources>

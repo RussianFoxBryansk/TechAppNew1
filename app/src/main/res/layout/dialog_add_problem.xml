@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/dialog_background">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добавить проблему"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Скрытые поля для ID -->
+        <TextView
+            android:id="@+id/hiddenUserId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/hiddenDeviceId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"/>
+
+        <!-- Выбор корпуса -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Корпус"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/campusSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+
+        <!-- Выбор аудитории -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Аудитория"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/classroomSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+
+        <!-- Выбор клетки -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Клетка"
+                    android:textSize="14sp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toggleGridButton"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Свернуть сетку"
+                    app:icon="@drawable/ic_expand_more"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="8dp"/>
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/placeGridScroll"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:fillViewport="true"
+                android:visibility="visible">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:id="@+id/placeGridContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+                </ScrollView>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- Выбор техники -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Техника"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/deviceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+
+        <!-- Описание проблемы -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="Описание проблемы">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/problemDescriptionInput"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:inputType="textCapSentences|textMultiLine"
+                android:gravity="top|start"
+                android:minLines="4"
+                android:maxLines="6"
+                android:textSize="16sp"
+                android:paddingVertical="12dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Кнопка создания -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createProblemBtn"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Создать проблему"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="@color/primary_color"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/white"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"/>
+    </LinearLayout>
+</ScrollView>

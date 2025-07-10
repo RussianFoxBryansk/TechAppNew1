@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TechAppNew</string>
+    <string name="expand_grid">Развернуть сетку</string>
+    <string name="collapse_grid">Свернуть сетку</string>
+</resources>

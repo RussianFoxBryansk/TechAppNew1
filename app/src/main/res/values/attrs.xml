@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="appBackground" format="reference|color" />
+    <attr name="appBackgroundAuth" format="reference|color" />
+    <attr name="appText" format="reference|color" />
+</resources>
